@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Configuration Demo</title>
+    <meta charset="utf-8" />
+    <link href="~/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <h1>Home</h1>
+        <div class="page-content">
+        <environment exclude="Development">
+            <div class="box w-25">
+                <a href="@ViewBag.Facebook">Facebook</a>
+            </div>
+
+            <div class="box w-25">
+                <a href="@ViewBag.Youtube">Youtube</a>
+            </div>
+
+            <div class="box w-25">
+                <a href="@ViewBag.Instagram">Instagram</a>
+            </div>
+
+            <div class="box w-25">
+                <a href="@ViewBag.Twitter">Twitter</a>
+            </div>
+        </environment>
+
+        <environment include="Development">
+            <div class="box w-25">
+                <a href="@ViewBag.Facebook">Facebook</a>
+            </div>
+
+            <div class="box w-25">
+                <a href="@ViewBag.Youtube">Youtube</a>
+            </div>
+
+            <div class="box w-25">
+                <a href="@ViewBag.Twitter">Twitter</a>
+            </div>
+        </environment>
+
+        </div>
+
+    </div>
+</body>
+</html>
